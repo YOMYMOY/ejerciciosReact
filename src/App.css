@@ -1,0 +1,176 @@
+* {
+  box-sizing: border-box; 
+  padding: 0;
+  margin: 0;
+}
+
+#root {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.body {
+  grid-template-rows: auto 1fr auto;
+  display: grid;
+  min-height: 100vh;
+  grid-template-areas: 'header header'
+                        'nav home'
+                        'footer footer';
+  grid-template-columns: minmax(auto, 12em) 5fr;
+  width: 100%;
+}
+
+.header {
+  grid-area: header;
+  display: flex;
+  align-items: baseline;
+  align-content: center;
+  gap: 30px;
+  height: 70px;
+  justify-content: center;
+  margin: 20px;
+}
+
+.fa-circle-nodes {
+  color: red;
+  font-size: 50px;
+  cursor: pointer;
+}
+
+.title {
+  display: inline-block;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  grid-area: nav;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-content: flex-start;
+  max-height: calc(100vh - 70px);
+  gap: 10px;
+}
+
+.link {
+  width: 100%;
+  font-size: 24px;
+  color: grey;
+  border-bottom: 1px solid grey;
+  padding-bottom: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.link:hover {
+  color: rgb(74, 74, 175);
+  background-color: #f0f0f0;
+}
+
+.home {
+  grid-area: home;
+  border-left: 1px solid lightgrey;
+}
+
+.footer {
+  grid-area: footer;
+  background: linear-gradient(90deg, #fff, #333, #fff);
+  color: white;
+  padding: 10px;
+  width: 100%;
+}
+
+.main {
+  margin: 0 auto;
+  align-self: center;
+  width: 80%;
+}
+
+.listaMain > li::marker {
+  background-color: green;
+  color: red;
+  font-weight: bolder;
+}
+
+.listaMain > li {
+  text-align: left;
+  margin: 10px;
+}
+
+.listaMain ul li {
+  margin-left: 25px;
+}
+
+/* Ejercicio 2 */
+
+.ej2 {
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.ej2-navbar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px 30px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 2px;
+  height: 80px;
+}
+
+.ej2-title {
+  width: 100%;
+}
+
+.ej2-main {
+  flex: 1;
+  padding: 10px;
+}
+
+.ej2-footer {
+  height: 30px;
+  border-top: 1px solid #333;
+}
+
+.ej3 {
+  height: 100%;
+}
+
+.ej3-main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  height: 100%;
+}
+
+.ej3-title {
+  position: absolute;
+  margin-top: 5px;
+}
+
+.ej3-hijo {
+  width: 100%;
+}
+
+.ej5 {
+  height: 100%;
+}
+
+.lista {
+  margin: 20px;
+}
+
+.lista h4 {
+  margin: 10px;
+}
+
+.li {
+  list-style: none;
+}
